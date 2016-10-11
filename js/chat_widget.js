@@ -71,8 +71,8 @@ function makeMinimizeWidget(mywidget){
     html += '<div id="live-chat-161011"> \
             <header class="clearfix"> \
                 <a href="#" class="chat-close"><img style="width: 13px;" src="' + image_url + 'close.png" /></a> \
-                <h4 id="title_content"><span>Powered by </span> \
-                    <img src= "' + image_url + 'logo.png" class="logo"/> <span class="apartment">ApartmentOcean</span></h4> \
+                <h4 id="title_content"><a href="http://www.apartmentocean.com/real-estate-bot"><span>Powered by </span> \
+                    <img src= "' + image_url + 'logo.png" class="logo"/> <span class="apartment">ApartmentOcean</span></a></h4> \
             </header> \
             <div class="chat-login"> \
                 <div class="chat-text"> \
@@ -87,9 +87,6 @@ function makeMinimizeWidget(mywidget){
             <div class="chat-body"> \
                 <div id="log" class="chat-history"> \
                 </div> \
-                <div id="typingnow"> \
-                    <p><img src="' + image_url + 'pencil.png" /> <span>' + shortenName(username) + ' is typing ...</span></p> \
-                </div> \
                 <div id="text-input"> \
                     <fieldset> \
                         <textarea id="message_input" placeholder="Type your message here" autofocus></textarea> \
@@ -100,6 +97,9 @@ function makeMinimizeWidget(mywidget){
                         <img src="' + image_url + 'attach.png" class="send_attach_file_btn" /> \
                         <input type="file" id="attach_file" accept="image/*"/> \
                     </div> \
+                </div> \
+                <div id="typingnow"> \
+                    <p><img src="' + image_url + 'pencil.png" /> <span>' + shortenName(username) + ' is typing ...</span></p> \
                 </div> \
             </div> \
         </div>';
@@ -203,7 +203,7 @@ $(document).on('click','#live-chat-161011 .send-msg-btn', function(){
         updateLog();
     }, 1000);
     updateLog();
-    $('#live-chat-161011 #typingnow p').css('display','none');
+    $('#live-chat-161011 #typingnow').css('display','none');
     $('#live-chat-161011 #message_input').val('')
 })
 $(document).on('click', '#live-chat-161011 .send_attach_file_btn', function(){
@@ -222,11 +222,11 @@ $(document).on('keyup',"#live-chat-161011 #message_input", function(event){
     var msg = $(this).val();
     if (msg != "")
     {
-        $('#live-chat-161011 #typingnow p').css('display','block');
+        $('#live-chat-161011 #typingnow').css('display','block');
         $('#live-chat-161011 #typingnow p span').html(username + " is typing...");
     }
     else
-        $('#live-chat-161011 #typingnow p').css('display','none');
+        $('#live-chat-161011 #typingnow').css('display','none');
 });
 
 })(jQuery); // We call our anonymous function immediately

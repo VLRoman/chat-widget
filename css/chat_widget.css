@@ -51,16 +51,18 @@
 	display: none;
 	box-shadow: 0 0 10px #888888;
 	border-radius: 10px;
+	height: 311px;
 }
 
-#live-chat-161011 header {
+#live-chat-161011 header{
 	background: #efefef;
 	border-radius: 5px 5px 0 0;
-	color: #6d6d6d;
 	cursor: pointer;
 	padding: 8px 9px;
 }
-
+#live-chat-161011 header a{
+	color: #6d6d6d;
+}
 #live-chat-161011 header h4 img, #live-chat-161011 header h4 span{
 	display: inline;
 	font-weight: 100;
@@ -130,7 +132,11 @@
 	padding: 2px 24px;
 	color: #6d6d6d;
 	background: #FFF;
-	width: 252px;
+	width: 236px;
+	position: relative;
+	bottom: 120px;
+	z-index: 10;
+	display: none;
 }
 #live-chat-161011 #typingnow img{
 	width: 14px;
@@ -139,7 +145,6 @@
 }
 #live-chat-161011 #typingnow p{
 	float: right;
-	display: none;
 }
 #live-chat-161011 #typingnow img, #live-chat-161011 #typingnow p span{
 	display: inline;
@@ -233,7 +238,7 @@
 }
 
 #live-chat-161011 .chat-history {
-	height: 140px;
+	height: 166px;
 	padding: 8px 11px;
 	overflow-y: scroll;
 }
