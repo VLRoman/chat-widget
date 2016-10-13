@@ -1,11 +1,11 @@
 # chat-widget
-chat widget jquery plugin
+Chat widget jquery plugin
 
 You can chat with bot any time <br/>
-Also you can send attached file <br/>
+Also You can send attached file <br/>
 You can plugin anywhere you want <br/>
-It's very easy to install. <br/>
+It's very easy to install <br/>
 
-<h1>Enjoying</h1>
+<h6>Enjoying</h6>
 
 
